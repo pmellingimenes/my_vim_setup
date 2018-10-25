@@ -24,6 +24,9 @@ set updatetime=100
 " Vim sensitive plugib
 Plugin 'tpope/vim-sensible'
 
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
 call vundle#end()
 filetype plugin indent on
 
