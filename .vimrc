@@ -58,6 +58,10 @@ autocmd QuickFixCmdPost *grep* cwindow
 " Kill trainling spaces
 autocmd BufWritePre * %s/\s\+$//e
 
+" Buffer navigation shortcut
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>
+
 " Copy & paste to system clipboard with <Space>p and <Space>y
 vmap <Leader>y "+y
 vmap <Leader>d "+d
