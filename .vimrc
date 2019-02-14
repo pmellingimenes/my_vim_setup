@@ -26,6 +26,7 @@ Plugin 'tpope/vim-sensible'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'kien/ctrlp.vim'
 
 Plugin 'scrooloose/nerdcommenter'
 
@@ -60,10 +61,6 @@ autocmd QuickFixCmdPost *grep* cwindow
 " Kill trainling spaces
 autocmd BufWritePre * %s/\s\+$//e
 
-" Buffer navigation shortcut
-nnoremap <C-N> :bnext<CR>
-nnoremap <C-P> :bprev<CR>
-
 " Copy & paste to system clipboard with <Space>p and <Space>y
 vmap <Leader>y "+y
 vmap <Leader>d "+d
@@ -79,5 +76,12 @@ set background=dark
 " Airline configs
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
+" CtrlP plugin configs
+set wildignore+=*/tmp/*,*/api-docs/*,*/node_modules/*,*/compiled/*
+
+" Buffer switching
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
 
 set hidden
