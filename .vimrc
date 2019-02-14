@@ -84,4 +84,7 @@ set wildignore+=*/tmp/*,*/api-docs/*,*/node_modules/*,*/compiled/*
 map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 
+" Ggrep cursor word
+nnoremap <C-G> :Ggrep "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 set hidden
