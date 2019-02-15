@@ -29,6 +29,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'kien/ctrlp.vim'
 
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'briancollins/vim-jst'
 
 call vundle#end()
 filetype plugin indent on
@@ -81,8 +82,8 @@ let g:airline#extensions#tabline#enabled = 1
 set wildignore+=*/tmp/*,*/api-docs/*,*/node_modules/*,*/compiled/*
 
 " Buffer switching
-map <C-J> :bnext<CR>
-map <C-K> :bprev<CR>
+map <C-K> :bnext<CR>
+map <C-J> :bprev<CR>
 
 " Ggrep cursor word
 nnoremap <C-G> :Ggrep "\b<C-R><C-W>\b"<CR>:cw<CR>
