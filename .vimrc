@@ -30,7 +30,7 @@ Plugin 'kien/ctrlp.vim'
 
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'briancollins/vim-jst'
-
+Plugin 'dense-analysis/ale'
 call vundle#end()
 filetype plugin indent on
 
@@ -89,3 +89,11 @@ map <C-J> :bprev<CR>
 nnoremap <C-G> :Ggrep "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 set hidden
+
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+let g:ale_fixers = {'javascript': ['standard']}
+
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
