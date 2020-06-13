@@ -12,3 +12,8 @@ Copy the .vimrc file to your home directory
 ```
 vim +PluginInstall +qall
 ```
+### Standard linter
+Intall standard linter
+```
+npm install -g standard
+```
