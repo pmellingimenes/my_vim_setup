@@ -54,7 +54,13 @@ set fileformats=unix,dos  " Empty files will be open as Unix
 set number
 
 " Standard js auto fix on save
-autocmd bufwritepost *.js silent !standard --fix %
+function! StandardFixer()
+ silent exec '!standard --fix %'
+ silent e %
+endfunction
+
+autocmd bufWritePost *.js :call StandardFixer()
+
 set autoread
 
 autocmd QuickFixCmdPost *grep* cwindow
