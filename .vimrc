@@ -16,7 +16,7 @@ Plugin 'vim-airline/vim-airline-themes'
 
 " Vim fugitive plugin
 Plugin 'tpope/vim-fugitive'
-
+Plugin 'christoomey/vim-conflicted'
 " Git gutter plugin
 Plugin 'airblade/vim-gitgutter'
 set updatetime=100
