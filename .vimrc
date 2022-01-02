@@ -53,14 +53,6 @@ set fileformats=unix,dos  " Empty files will be open as Unix
 
 set number
 
-" Standard js auto fix on save
-function! StandardFixer()
- silent exec '!standard --fix %'
- silent e %
-endfunction
-
-autocmd bufWritePost *.js :call StandardFixer()
-
 set autoread
 
 autocmd QuickFixCmdPost *grep* cwindow
@@ -95,11 +87,6 @@ map <C-J> :bprev<CR>
 nnoremap <C-G> :Ggrep "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 set hidden
-
-let g:ale_linters = {
-\   'javascript': ['standard'],
-\}
-let g:ale_fixers = {'javascript': ['standard']}
 
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
