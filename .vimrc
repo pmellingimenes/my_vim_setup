@@ -31,6 +31,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'briancollins/vim-jst'
 Plugin 'dense-analysis/ale'
+Plugin 'kchmck/vim-coffee-script'
+
 call vundle#end()
 filetype plugin indent on
 
