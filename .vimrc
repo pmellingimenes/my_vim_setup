@@ -1,40 +1,43 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set directory=$HOME/.vim/swapfiles
+
+call plug#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
 
 " Gruvbox color theme
-Plugin 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " Awesome airline plugin
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Vim fugitive plugin
-Plugin 'tpope/vim-fugitive'
-Plugin 'christoomey/vim-conflicted'
+Plug 'tpope/vim-fugitive'
+Plug 'christoomey/vim-conflicted'
 " Git gutter plugin
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 set updatetime=100
 
 " Vim sensitive plugib
-Plugin 'tpope/vim-sensible'
+Plug 'tpope/vim-sensible'
 
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'kien/ctrlp.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'briancollins/vim-jst'
-Plugin 'dense-analysis/ale'
-Plugin 'kchmck/vim-coffee-script'
+Plug 'scrooloose/nerdcommenter'
+Plug 'briancollins/vim-jst'
+Plug 'dense-analysis/ale'
+Plug 'kchmck/vim-coffee-script'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'CoderCookE/vim-chatgpt'
+Plug 'godlygeek/tabular'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 syntax on
 
@@ -69,6 +72,7 @@ nmap <Leader>p "+p
 nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
+nmap <C-P> :FZF<CR>
 
 " Set gruvbox colorscheme
 colorscheme gruvbox
@@ -92,3 +96,9 @@ set hidden
 
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
+
+let g:chat_gpt_max_tokens=2000
+let g:chat_gpt_session_mode=1
+let g:chat_gpt_temperature = 0.7
+let g:chat_gpt_model='gpt-4'
+let g:chat_gpt_lang = 'English'
